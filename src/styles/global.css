@@ -1,0 +1,18 @@
+* {
+  font-weight: 400;
+  margin: 0;
+}
+
+html, body {
+  font-family: "Roboto", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 10px;
+  word-spacing: 1px;
+  color: #666;
+  box-sizing: border-box;
+}
+
+a:active{
+  color: #68b88e
+}
