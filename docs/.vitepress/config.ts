@@ -1,17 +1,19 @@
-/* eslint-disable no-console */
 import { defineConfigWithTheme } from 'vitepress'
-import { getPostList } from './theme'
-import type { ThemeLinearConfig } from './theme'
+import type { ThemeLinearConfig } from './theme/types'
+import { getPosts } from './theme/utils'
 
-const posts = getPostList()
+async function config() {
+  const posts = await getPosts('en-US', 'Asia/Shanghai')
+  return defineConfigWithTheme<ThemeLinearConfig>({
+    title: 'YIYANG SUN',
+    description: 'Love for life and technology.',
+    themeConfig: {
+      links: [
+        { name: 'GitHub', link: 'https://github.com/syy11cn', icon: '/assets/images/github.svg' },
+      ],
+      posts,
+    },
+  })
+}
 
-export default defineConfigWithTheme<ThemeLinearConfig>({
-  title: 'YIYANG SUN',
-  description: 'Love for life and technology.',
-  themeConfig: {
-    links: [
-      { name: 'GitHub', link: 'https://github.com/syy11cn', icon: '/assets/images/github.svg' },
-    ],
-    posts,
-  },
-})
+export default config()
