@@ -10,6 +10,7 @@ async function config() {
     themeConfig: {
       links: [
         { name: 'GitHub', link: 'https://github.com/syy11cn', icon: '/assets/images/github.svg' },
+        { name: 'Posts', link: '/posts', icon: '/assets/images/post.svg' },
       ],
       posts,
     },
