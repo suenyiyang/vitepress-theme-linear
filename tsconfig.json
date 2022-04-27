@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "rootDir": "./",
+    "jsx": "preserve",
     "moduleResolution": "node",
-    "target": "ES2015",
-    "rootDir": "."
+    "skipLibCheck": true,
+    "esModuleInterop": true
   }
 }
