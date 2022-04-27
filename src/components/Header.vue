@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import type { Link } from '../types'
 const data = useData()
 const links = data.site.value.themeConfig.links as Link[]
@@ -13,8 +13,8 @@ const siteInfo = data.site.value
       {{ siteInfo.description }}
     </p>
     <p>
-      <a v-for="item in links" :key="item.name" :href="item.link">
-        <img :src="item.icon" :alt="item.name">
+      <a v-for="item in links" :key="item.name" :href="withBase(item.link)">
+        <img :src="withBase(item.icon)" :alt="item.name">
       </a>
     </p>
   </header>
