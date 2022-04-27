@@ -1,6 +1,7 @@
 ---
 title: 尤大博客同款风格的 hexo-theme-linear 主题了解一下 ~
 cover: https://shaun.oss-cn-beijing.aliyuncs.com/typora/linear1.png/watermark
+lang: zh
 date: 2021-12-09 22:39:02
 ---
 
