@@ -1,0 +1,5 @@
+---
+title: Posts
+---
+
+<PostList />
