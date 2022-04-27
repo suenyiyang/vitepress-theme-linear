@@ -12,5 +12,6 @@ export interface ThemeLinearConfig extends DefaultTheme.Config{
 }
 
 export interface Post{
-  title: string
+  frontmatter: Record<string, any>
+  regularPath: string
 }
