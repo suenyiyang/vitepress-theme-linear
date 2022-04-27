@@ -22,7 +22,7 @@ defineProps<{
   display: flex;
   align-items: center;
   border-bottom: 1px solid #e6e6e6;
-  padding: 3rem 0 3rem;
+  padding: 2rem 0 2rem;
 }
 
 .post-card:first-child {
@@ -36,12 +36,19 @@ defineProps<{
 h2 {
   justify-content: flex-start;
   height: 100%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2::before {
+  border: 0;
 }
 
 h2 a {
   color: #444;
   font-size: 2rem;
   display: inline;
+  border-bottom: unset;
 }
 
 h2 a:hover {

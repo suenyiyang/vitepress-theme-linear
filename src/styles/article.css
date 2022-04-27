@@ -1,0 +1,89 @@
+.article .header-anchor{
+  display: none;
+}
+
+.article h1 {
+  font-size: 3rem;
+  line-height: 3.8rem;
+}
+
+.article h2 {
+  position: relative;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  margin: 3rem 0 3rem;
+}
+
+.article h2::before {
+  content: '';
+  border-left: 5px solid var(--primary-color);
+  position: absolute;
+  left: -1.5rem;
+  height: 75%;
+  top: 12%;
+}
+
+.article h1, .article h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article h3 {
+  line-height: 2.6rem;
+  margin: 1.5rem 0 1.5rem;
+}
+
+.article p {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+}
+
+.article a {
+  color: var(--primary-color);
+  border-bottom: 2px solid transparent;
+}
+
+.article a:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+.article img {
+  display: block;
+  max-width: 70%;
+  margin: 1rem auto;
+}
+
+.article ol, ul {
+  padding-left: 1.6rem;
+}
+
+.article hr {
+  margin: 1.6rem 0;
+  height: 1px;
+  background-color: #e6e6e6;
+  border: none;
+}
+
+.article strong {
+  font-weight: 600;
+  color: #444;
+}
+
+.article code{
+  font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
+  background-color: var(--prism-background);
+  font-size: 1.3rem;
+  padding: 3px 1rem;
+  margin: 0 5px;
+  border-radius: 2px;
+}
+
+.article pre{
+  font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
+  font-size: 1.3rem;
+  overflow-x: auto;
+  text-align: left;
+  padding: 1.5rem 2.5rem;
+  line-height: 1.5rem;
+}
+  

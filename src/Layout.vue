@@ -1,16 +1,12 @@
 <script setup lang='ts'>
-import { useRoute } from 'vitepress'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-
-const route = useRoute()
-const postListPages = ['/posts']
 </script>
 
 <template>
   <Header />
   <div class="main">
-    <Content />
+    <Content class="article" />
     <Footer />
   </div>
 </template>

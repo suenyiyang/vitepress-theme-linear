@@ -14,5 +14,6 @@ defineProps<{
 h3 {
   font-size: 1.3rem;
   color: #999;
+  margin: 0;
 }
 </style>

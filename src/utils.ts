@@ -33,7 +33,7 @@ function _convertDate(date: string, locale: string, timezone: string) {
 }
 
 function _compareDate(obj1: Post, obj2: Post) {
-  return obj1.frontmatter.date < obj2.frontmatter.date ? 1 : -1
+  return obj1.frontmatter.date > obj2.frontmatter.date ? 1 : -1
 }
 
 async function getPostMDFilePaths() {

@@ -3,6 +3,8 @@ import type { Theme } from 'vitepress'
 import './styles/reset.css'
 import './styles/fonts.css'
 import './styles/global.css'
+import './styles/prism.css'
+import './styles/article.css'
 
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
