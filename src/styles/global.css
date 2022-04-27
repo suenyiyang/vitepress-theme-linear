@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #68b88e;
+}
+
 * {
   font-weight: 400;
   margin: 0;
@@ -14,5 +18,14 @@ html, body {
 }
 
 a:active{
-  color: #68b88e
+  color: var(--primary-color)
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
+}
+
+.main h2, .main h3 {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
