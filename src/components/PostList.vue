@@ -7,9 +7,7 @@ const posts: Post[] = data.site.value.themeConfig.posts
 </script>
 
 <template>
-  <div v-for="post in posts" :key="post.frontmatter.title">
-    <PostCard :post="post" />
-  </div>
+  <PostCard v-for="post in posts" :key="post.frontmatter.title" :post="post" />
 </template>
 
 <style scoped></style>

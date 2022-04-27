@@ -13,5 +13,6 @@ defineProps<{
 <style scoped>
 h3 {
   font-size: 1.3rem;
+  color: #999;
 }
 </style>

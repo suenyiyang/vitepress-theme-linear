@@ -12,12 +12,21 @@ const pathObj = computed(() => {
 
 <template>
   <!-- eslint-disable-next-line vue/valid-v-on -->
-  <a v-if="pathObj.route.path !== '/'" :href="pathObj.path">cd ../</a>
+  <p>
+    <a v-if="pathObj.route.path !== '/'" :href="pathObj.path">cd ../</a>
+  </p>
 </template>
 
 <style scoped>
-a{
+p {
   margin-top: 3rem;
   display: block;
+  font-size: 1.3rem;
+}
+
+p a {
+  color: #999;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
 </style>
