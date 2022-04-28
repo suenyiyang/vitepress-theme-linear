@@ -36,11 +36,11 @@ pnpm i -D vitepress-theme-linear
 
 ### Config Theme
 
-### Preparation
+#### Preparation
 
 Refer to official [guide](https://vitepress.vuejs.org/guide/configuration.html#typed-theme-config) to create the `config.ts` file.
 
-### Theme Config
+#### Theme Config
 
 - `links`:
   - type: Array;
@@ -50,7 +50,7 @@ Refer to official [guide](https://vitepress.vuejs.org/guide/configuration.html#t
     - icon: String - path to the icon (public assets should be placed at `public` folder in `docs` folder);
 - `posts`: Use `getPosts` function to generate.
 
-### Sample Configuration
+#### Sample Configuration
 
 > Don't worry if module `./theme/config` is not found.
 
