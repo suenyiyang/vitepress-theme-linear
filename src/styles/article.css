@@ -11,8 +11,8 @@
 .article h2 {
   position: relative;
   font-size: 2.4rem;
-  line-height: 3.2rem;
-  margin: 3rem 0 3rem;
+  line-height: 4.8rem;
+  margin: 3rem 0;
 }
 
 .article h2::before {
@@ -30,13 +30,26 @@
 }
 
 .article h3 {
-  line-height: 2.6rem;
-  margin: 1.5rem 0 1.5rem;
+  font-size: 2rem;
+  line-height: 4rem;
+  margin: 2.5rem 0;
+  letter-spacing: 1px;
 }
 
-.article p {
+.article h4 {
   font-size: 1.6rem;
   line-height: 3.2rem;
+  margin: 2.5rem 0;
+  letter-spacing: 1px;
+}
+
+.article p, .article li {
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+.article > div > p, .article > div > ul, .article > div > ol {
+  margin: 2rem 0 2rem;
 }
 
 .article a {
@@ -58,6 +71,18 @@
   padding-left: 1.6rem;
 }
 
+.article li {
+  position: relative;
+}
+
+.article li::before {
+  position: absolute;
+  font-weight: 600;
+  content: " · ";
+  margin: 0;
+  left: -1rem;
+}
+
 .article hr {
   margin: 1.6rem 0;
   height: 1px;
@@ -68,6 +93,19 @@
 .article strong {
   font-weight: 600;
   color: #444;
+}
+
+.article blockquote {
+  margin: 2em 0;
+  padding-left: 1.6rem;
+  border-left: 5px solid #e6e6e6;
+}
+
+.article blockquote p {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.8em;
+  color: #999;
 }
 
 .article code{
@@ -85,6 +123,11 @@
   overflow-x: auto;
   text-align: left;
   padding: 1.5rem 2.5rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
+}
+
+.article pre code {
+  padding: 0;
+  margin: 0;
 }
   
