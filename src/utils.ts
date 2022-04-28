@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import fs from 'fs-extra'
-import { globby } from 'globby'
+import globby from 'globby'
 import matter from 'gray-matter'
 import type { Post } from './types'
 

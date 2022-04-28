@@ -1,6 +1,5 @@
 {
   "name": "vitepress-theme-linear",
-  "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@6.32.6",
   "description": "Linear theme for vitepress.",
@@ -15,7 +14,7 @@
   },
   "dependencies": {
     "fs-extra": "^10.1.0",
-    "globby": "^13.1.1",
+    "globby": "11.0.4",
     "gray-matter": "^4.0.3"
   },
   "devDependencies": {
