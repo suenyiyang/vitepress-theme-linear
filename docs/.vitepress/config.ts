@@ -1,6 +1,6 @@
 import { defineConfigWithTheme } from 'vitepress'
 import type { ThemeLinearConfig } from './theme/types'
-import { getPosts } from './theme/utils'
+import { getPosts } from './theme/config'
 
 async function config() {
   const posts = await getPosts('en-US', 'Asia/Shanghai')
