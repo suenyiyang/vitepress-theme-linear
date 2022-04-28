@@ -5,8 +5,8 @@ import { getPosts } from './theme/config'
 async function config() {
   const posts = await getPosts('en-US', 'Asia/Shanghai')
   return defineConfigWithTheme<ThemeLinearConfig>({
-    title: 'YIYANG SUN',
-    description: 'Love for life and technology.',
+    title: 'Vitepress Theme Linear',
+    description: 'A dream theme for vitepress blogs.',
     themeConfig: {
       links: [
         { name: 'GitHub', link: 'https://github.com/syy11cn/vitepress-theme-linear', icon: '/assets/images/github.svg' },
