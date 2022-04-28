@@ -7,7 +7,9 @@
   "license": "MIT",
   "author": "syy11cn",
   "scripts": {
-    "dev:docs": "vitepress dev docs"
+    "theme": "cd docs/.vitepress/ && rm -rf theme && ln -s ../../src theme && cd ../../",
+    "dev": "npm run theme && vitepress dev docs",
+    "build": "npm run theme && vitepress build docs"
   },
   "peerDependencies": {
     "typescript": "^4.6.3"
