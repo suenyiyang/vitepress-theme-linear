@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A simply theme for vitepress blogs.
+A dream theme for vitepress blogs.
 
 ## Usage
 
@@ -84,6 +84,10 @@ For static assets, take `github.svg` as example, place it in `docs/public/assets
 ```bash
 npm run dev
 ```
+
+## Acknowledgement
+
+Design inspired by [Evan You's Blog](https://blog.evanyou.me/) and [Anthony Fu's Blog](https://antfu.me/).
 
 ## License
 
