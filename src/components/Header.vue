@@ -26,6 +26,7 @@ header{
   flex-direction: column;
   align-items: center;
   margin: 5rem auto 5rem;
+  text-align: center;
 }
 header > *:not(:last-child){
   margin-bottom: 2rem;
@@ -47,7 +48,7 @@ p{
   align-items: center;
 }
 p a {
-  padding: 0 0.5rem;
+  padding: 0 8px;
   height: 20px;
   object-fit: cover;
 }

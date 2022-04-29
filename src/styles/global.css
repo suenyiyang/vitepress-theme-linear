@@ -17,6 +17,10 @@ html, body {
   box-sizing: border-box;
 }
 
+#app {
+  padding: 0 3rem 5rem;
+}
+
 a:active{
   color: var(--primary-color)
 }

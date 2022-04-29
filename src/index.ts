@@ -5,6 +5,7 @@ import './styles/fonts.css'
 import './styles/global.css'
 import './styles/prism.css'
 import './styles/article.css'
+import './styles/reactivity.css'
 
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'

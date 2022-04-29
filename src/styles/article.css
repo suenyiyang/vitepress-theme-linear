@@ -112,8 +112,7 @@
   font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
   background-color: var(--prism-background);
   font-size: 1.3rem;
-  padding: 3px 1rem;
-  margin: 0 5px;
+  padding: 3px 6px;
   border-radius: 2px;
 }
 
@@ -128,6 +127,5 @@
 
 .article pre code {
   padding: 0;
-  margin: 0;
 }
   
