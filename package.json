@@ -1,6 +1,6 @@
 {
   "name": "vitepress-theme-linear",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@6.32.6",
   "description": "Linear theme for vitepress.",
   "keywords": [],
