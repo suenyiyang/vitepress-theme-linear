@@ -9,6 +9,7 @@ export interface Link{
 export interface ThemeLinearConfig extends DefaultTheme.Config{
   links?: Link[]
   posts?: Post[]
+  favicon?: string
 }
 
 export interface Post{
