@@ -14,7 +14,7 @@ async function config() {
         { name: 'Links', link: '/links', icon: '/assets/images/link.svg' },
       ],
       posts,
-      favicon: 'https://shaun-logo.oss-cn-beijing.aliyuncs.com/avatar.jpg'
+      favicon: 'https://shaun-logo.oss-cn-beijing.aliyuncs.com/avatar.jpg',
     },
   })
 }

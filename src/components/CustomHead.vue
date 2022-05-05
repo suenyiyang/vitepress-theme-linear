@@ -1,12 +1,30 @@
 <script setup lang='ts'>
-import { Head } from '@vueuse/head'
+import { Head, useHead } from '@vueuse/head'
 import { useData } from 'vitepress'
 
 const data = useData()
-const pagedata = data.page.value.frontmatter
-const favicon = data.site.value.themeConfig.favicon
-const keywords = pagedata.keywords
-const description = pagedata.description
+const pageData = data.page.value.frontmatter
+const siteData = data.site.value.themeConfig
+const favicon = siteData.favicon
+const googleId = siteData.googleId
+const keywords = pageData.keywords
+const description = pageData.description
+
+if (googleId) {
+  const googleCode = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${googleId}');
+  `
+
+  useHead({
+    script: [
+      { async: true, src: `https://www.googletagmanager.com/gtag/js?id=${googleId}` },
+      { children: googleCode },
+    ],
+  })
+}
 </script>
 
 <template>
@@ -17,4 +35,5 @@ const description = pagedata.description
   </Head>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
