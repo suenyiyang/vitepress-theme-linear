@@ -10,7 +10,7 @@ export async function getPosts(locale: string, timezone: string): Promise<Post[]
     paths.map(async (item) => {
       const content = await fs.readFile(item, 'utf-8')
       const { data } = matter(content)
-      data.date = data.date || (await fs.stat(item)).atime.toString()
+      data.date = data.date || (await fs.stat(item)).birthtime.toString()
       data.date = _convertDate(data.date, locale, timezone)
       return {
         frontmatter: data,
