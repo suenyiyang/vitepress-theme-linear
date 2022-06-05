@@ -7,6 +7,12 @@ async function config() {
   return defineConfigWithTheme<ThemeLinearConfig>({
     title: 'Vitepress Theme Linear',
     description: 'A dream theme for vitepress blogs.',
+    markdown: {
+      theme: {
+        light: 'css-variables',
+        dark: 'css-variables',
+      },
+    },
     themeConfig: {
       links: [
         { name: 'GitHub', link: 'https://github.com/syy11cn/vitepress-theme-linear', icon: '/assets/images/github.svg' },
