@@ -4,7 +4,7 @@ import { createHead } from '@vueuse/head'
 import './styles/reset.css'
 import './styles/fonts.css'
 import './styles/global.css'
-import './styles/prism.css'
+import './styles/shiki.css'
 import './styles/article.css'
 import './styles/reactivity.css'
 

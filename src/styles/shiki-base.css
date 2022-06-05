@@ -1,0 +1,252 @@
+:root {
+  --shiki-token-scheme: light;
+
+  /* Colors */
+  --shiki-token-foreground: #6e6e6e;
+  --shiki-token-background: #f4f4f4;
+
+  /* Tokens */
+  --shiki-token-comment: #a8a8a8;
+  --shiki-token-string: #555555;
+  --shiki-token-literal: #333333;
+  --shiki-token-keyword: #000000;
+  --shiki-token-function: #4f4f4f;
+  --shiki-token-deleted: #333333;
+  --shiki-token-class: #333333;
+  --shiki-token-builtin: #757575;
+  --shiki-token-property: #333333;
+  --shiki-token-namespace: #4f4f4f;
+  --shiki-token-punctuation: #ababab;
+  --shiki-token-decorator: var(--shiki-token-class);
+  --shiki-token-operator: var(--shiki-token-punctuation);
+  --shiki-token-number: var(--shiki-token-literal);
+  --shiki-token-boolean: var(--shiki-token-literal);
+  --shiki-token-variable: var(--shiki-token-literal);
+  --shiki-token-constant: var(--shiki-token-literal);
+  --shiki-token-symbol: var(--shiki-token-literal);
+  --shiki-token-interpolation: var(--shiki-token-literal);
+  --shiki-token-selector: var(--shiki-token-keyword);
+  --shiki-token-keyword-control: var(--shiki-token-keyword);
+  --shiki-token-regex: var(--shiki-token-string);
+  --shiki-token-json-property: var(--shiki-token-property);
+  --shiki-token-inline-background: var(--shiki-token-background);
+
+  /* Token Styles */
+  --shiki-token-comment-style: italic;
+  --shiki-token-url-decoration: underline;
+
+  /* Extension */
+  --shiki-token-line-number: #a5a5a5;
+  --shiki-token-line-number-gutter: #333333;
+  --shiki-token-line-highlight-background: #eeeeee;
+  --shiki-token-selection-background: #aaaaaa;
+  --shiki-token-marker-color: var(--shiki-token-foreground);
+  --shiki-token-marker-opacity: 0.4;
+  --shiki-token-marker-font-size: 0.8em;
+
+  /* Font */
+  --shiki-token-font-size: 1em;
+  --shiki-token-line-height: 1.5em;
+  --shiki-token-font-family: monospace;
+  --shiki-token-inline-font-size: var(--shiki-token-font-size);
+  --shiki-token-block-font-size: var(--shiki-token-font-size);
+  
+  /* Sizing */
+  --shiki-token-tab-size: 2;
+  
+  --shiki-token-block-padding-x: 1em;
+  --shiki-token-block-padding-y: 1em;
+  --shiki-token-block-margin-x: 0;
+  --shiki-token-block-margin-y: 0.5em;
+  --shiki-token-block-radius: 0.3em;
+  --shiki-token-inline-padding-x: 0.3em;
+  --shiki-token-inline-padding-y: 0.1em;
+  --shiki-token-inline-radius: 0.3em;
+}
+
+div[class*='language-'],
+pre[class*='language-'],
+code[class*='language-'] {
+  font-size: var(--shiki-token-font-size);
+  font-family: var(--shiki-token-font-family);
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: var(--shiki-token-line-height);
+  -moz-tab-size: var(--shiki-token-tab-size);
+  -o-tab-size: var(--shiki-token-tab-size);
+  tab-size: var(--shiki-token-tab-size);
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  color: var(--shiki-token-foreground) !important;
+}
+
+/* Code blocks */
+div[class*='language-'],
+pre[class*='language-'] {
+  font-size: var(--shiki-token-block-font-size);
+  padding: var(--shiki-token-block-padding-y) var(--shiki-token-block-padding-x);
+  margin: var(--shiki-token-block-margin-y) var(--shiki-token-block-margin-x);
+  border-radius: var(--shiki-token-block-radius);
+  overflow: auto;
+  background: var(--shiki-token-background);
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  font-size: var(--shiki-token-inline-font-size);
+  padding: var(--shiki-token-inline-padding-y) var(--shiki-token-inline-padding-x);
+  border-radius: var(--shiki-token-inline-radius);
+  background: var(--shiki-token-inline-background);
+}
+
+/* Selection */
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection,
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+  background: var(--shiki-token-selection-background);
+}
+
+/* Tokens */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--shiki-token-comment);
+  font-style: var(--shiki-token-comment-style);
+}
+
+.token.namespace {
+  color: var(--shiki-token-namespace);
+}
+
+.token.interpolation {
+  color: var(--shiki-token-interpolation);
+}
+
+.token.string {
+  color: var(--shiki-token-string);
+}
+
+.token.punctuation {
+  color: var(--shiki-token-punctuation);
+}
+
+.token.operator {
+  color: var(--shiki-token-operator);
+}
+
+.token.keyword.module,
+.token.keyword.control-flow {
+  color: var(--shiki-token-keyword-control);
+}
+
+.token.url,
+.token.symbol,
+.token.inserted {
+  color: var(--shiki-token-symbol);
+}
+
+.token.constant {
+  color: var(--shiki-token-constant);
+}
+
+.token.string.url {
+  text-decoration: var(--shiki-token-url-decoration);
+}
+
+.token.boolean,
+.language-json .token.boolean {
+  color: var(--shiki-token-boolean);
+}
+
+.token.number,
+.language-json .token.number {
+  color: var(--shiki-token-number);
+}
+
+.token.variable {
+  color: var(--shiki-token-variable);
+}
+
+.token.keyword {
+  color: var(--shiki-token-keyword);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.selector {
+  color: var(--shiki-token-selector);
+}
+
+.token.function {
+  color: var(--shiki-token-function);
+}
+
+.token.deleted {
+  color: var(--shiki-token-deleted);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.class-name {
+  color: var(--shiki-token-class);
+}
+
+.token.tag,
+.token.builtin {
+  color: var(--shiki-token-builtin);
+}
+
+.token.attr-name,
+.token.property,
+.token.entity {
+  color: var(--shiki-token-property);
+}
+
+.language-json .token.property {
+  color: var(--shiki-token-json-property);
+}
+
+.token.regex {
+  color: var(--shiki-token-regex);
+}
+
+.token.decorator,
+.token.annotation {
+  color: var(--shiki-token-decorator);
+}
+
+/* overrides color-values for the Line Numbers plugin
+ * http://shiki-tokenjs.com/plugins/line-numbers/
+ */
+.line-numbers .line-numbers-rows {
+  border-right-color: var(--shiki-token-line-number);
+}
+
+.line-numbers-rows > span:before {
+  color: var(--shiki-token-line-number-gutter);
+}
+
+/* overrides color-values for the Line Highlight plugin
+  * http://shiki-tokenjs.com/plugins/line-highlight/
+  */
+.line-highlight {
+  background: var(--shiki-token-line-highlight-background);
+}
