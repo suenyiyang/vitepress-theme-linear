@@ -117,7 +117,6 @@ ol > li::before {
   position: absolute;
   color: var(--secondary-text);
   left: 0.25em;
-  top: 0.5625em;
 }
 
 hr {
