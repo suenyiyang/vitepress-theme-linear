@@ -16,4 +16,5 @@ export interface ThemeLinearConfig extends DefaultTheme.Config{
 export interface Post{
   frontmatter: Record<string, any>
   regularPath: string
+  filePath: string
 }

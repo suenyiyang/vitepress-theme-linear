@@ -4,23 +4,21 @@ import { createHead } from '@vueuse/head'
 import './styles/reset.css'
 import './styles/fonts.css'
 import './styles/global.css'
-import './styles/shiki.css'
-import './styles/article.css'
+import './styles/text.css'
 import './styles/reactivity.css'
+import './styles/article.css'
 
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 import PostList from './components/PostList.vue'
 
-const head = createHead()
-
-const theme: Theme = {
+const LinearTheme: Theme = {
   Layout,
   NotFound,
   enhanceApp({ app }) {
     app.component('PostList', PostList)
-    app.use(head)
+    app.use(createHead() as any)
   },
 }
 
-export default theme
+export default LinearTheme

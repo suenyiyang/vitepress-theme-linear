@@ -32,6 +32,7 @@ if (googleId) {
     <link v-if="favicon" rel="shortcut icon" :href="favicon" type="image/x-icon">
     <meta v-if="keywords" name="keywords" :content="keywords">
     <meta v-if="description" name="description" :content="description">
+    <meta name="google" content="notranslate">
   </Head>
 </template>
 

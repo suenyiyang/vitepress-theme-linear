@@ -8,13 +8,15 @@ export async function getPosts(locale: string, timezone: string): Promise<Post[]
   const paths = await getPostMDFilePaths()
   const posts = await Promise.all(
     paths.map(async (item) => {
-      const content = await fs.readFile(item, 'utf-8')
-      const { data } = matter(content)
-      data.rawDate = data.date || (await fs.stat(item)).birthtime.toString()
+      const file = await fs.readFile(item, 'utf-8')
+      const { data, content } = matter(file)
+      data.rawDate = data.date ? new Date(data.date).toString() : (await fs.stat(item)).birthtime.toString()
       data.date = _convertDate(data.rawDate, locale, timezone)
+      data.readTime = calculateReadTime(content)
       return {
         frontmatter: data,
-        regularPath: `/${item.replace('docs/posts', 'posts').replace('.md', '.html')}`,
+        regularPath: `/${item.replace('docs/posts', 'posts').replace('.md', '')}`,
+        filePath: `${item.replace('docs/posts', 'posts')}`,
       }
     }),
   )
@@ -25,7 +27,6 @@ export async function getPosts(locale: string, timezone: string): Promise<Post[]
 function _convertDate(date: string, locale: string, timezone: string) {
   const json_date = new Date(date).toLocaleString(locale, {
     timeZone: timezone,
-    year: 'numeric',
     month: 'short',
     day: '2-digit',
   })
@@ -41,4 +42,11 @@ async function getPostMDFilePaths() {
     ignore: ['node_modules', 'README.md'],
   })
   return paths.filter(item => item.includes('posts/'))
+}
+
+function calculateReadTime(content: string): number {
+  const wordsPerMinute = 300
+  const approximateLength = content.replace(/\r?\n/g, '').length
+
+  return Math.ceil(approximateLength / wordsPerMinute)
 }

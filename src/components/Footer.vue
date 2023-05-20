@@ -21,12 +21,10 @@ const pathObj = computed(() => {
 p {
   margin-top: 3rem;
   display: block;
-  font-size: 1.3rem;
 }
 
 p a {
-  color: #999;
-  word-spacing: 0.1rem;
-  letter-spacing: 0.1rem;
+  color: var(--secondary-text);
+
 }
 </style>

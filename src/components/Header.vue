@@ -1,59 +1,80 @@
 <script setup lang='ts'>
 import { useData, withBase } from 'vitepress'
+import { useDark, useToggle } from '@vueuse/core'
 import type { Link } from '../types'
 const data = useData()
 const links = data.site.value.themeConfig.links as Link[]
 const siteInfo = data.site.value
+
+const isDark = useDark({ valueLight: 'light' })
+const toggleDark = useToggle(isDark)
 </script>
 
 <template>
   <header>
     <a class="title" href="/">{{ siteInfo.title }}</a>
-    <p class="sub-title">
-      {{ siteInfo.description }}
-    </p>
-    <p>
-      <a v-for="item in links" :key="item.name" :href="withBase(item.link)">
-        <img :src="withBase(item.icon)" :alt="item.name">
-      </a>
-    </p>
+    <div class="control">
+      <div class="navLine">
+        <a v-for="item in links" :key="item.name" class="navItem" :href="withBase(item.link)">
+          {{ item.name }}
+        </a>
+      </div>
+      <div class="colorTheme" @click="toggleDark()">
+        {{ isDark ? '☀️' : '🌙' }}
+      </div>
+    </div>
   </header>
 </template>
 
 <style scoped>
-header{
+header {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 5rem auto 5rem;
-  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 10rem;
 }
-header > *:not(:last-child){
-  margin-bottom: 2rem;
-}
+
 .title{
-  letter-spacing: 6px;
-  font-size: 1.6rem;
-  color: #444;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 800;
+  color: var(--deep-text);
 }
-.title:active{
-  color: #444;
-}
-.sub-title{
-  letter-spacing: 3px;
-  font-size: 1.3rem;
-}
-p{
+
+.control {
   display: flex;
   align-items: center;
 }
-p a {
-  padding: 0 8px;
-  height: 20px;
-  object-fit: cover;
+
+.colorTheme {
+  font-family: emoji;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 2rem;
 }
-p a img{
-  height: 100%;
-  object-fit: cover;
+
+.navLine {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primary-text);
+  position: relative;
+}
+
+.navItem:hover {
+  color: var(--deep-text);
+}
+
+.navItem:not(:last-child) {
+  margin-right: 2rem;
 }
 </style>

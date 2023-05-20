@@ -5,15 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <h3>
-    <time class="date" :datetime="date">{{ date }}</time>
-  </h3>
+  <time class="date" :datetime="date">{{ date }}</time>
 </template>
 
-<style scoped>
-h3 {
-  font-size: 1.3rem;
-  color: #999;
-  margin: 0;
-}
-</style>
+<style scoped></style>
