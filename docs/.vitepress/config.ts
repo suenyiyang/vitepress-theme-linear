@@ -30,6 +30,7 @@ const getConfig = async () => {
       ],
       posts,
       favicon: 'https://shaun-logo.oss-cn-beijing.aliyuncs.com/avatar.jpg',
+      walineServerURL: 'https://blog-comment-syy11cn.vercel.app/',
     },
   })
 }

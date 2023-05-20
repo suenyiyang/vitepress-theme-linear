@@ -1,5 +1,6 @@
 ---
 home: true
+comments: false
 ---
 
 # Vitepress Theme Linear
@@ -56,7 +57,8 @@ Refer to official [guide](https://vitepress.vuejs.org/guide/configuration.html#t
 
 ```ts
 import { defineConfigWithTheme } from 'vitepress'
-import { ThemeLinearConfig, getPosts } from './theme/config'
+import type { ThemeLinearConfig } from './theme/config'
+import { getPosts } from './theme/config'
 
 const locale = 'en-US'
 const timezone = 'Asia/Shanghai'
