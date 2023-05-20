@@ -1,0 +1,185 @@
+html.dark {
+  --deep-text: var(--deep-text-white);
+  --title-text: var(--title-text-white);
+  --primary-text: var(--primary-text-white);
+  --secondary-text: var(--secondary-text-white);
+  --disabled-text: var(--disabled-text-white);
+  --border: var(--border-white);
+  --divider: var(--divider-white);
+  --background: var(--background-white);
+  --app-background: var(--app-background-black);
+}
+
+html.light {
+  --deep-text: var(--deep-text-black);
+  --title-text: var(--title-text-black);
+  --primary-text: var(--primary-text-black);
+  --secondary-text: var(--secondary-text-black);
+  --disabled-text: var(--disabled-text-black);
+  --border: var(--border-black);
+  --divider: var(--divider-black);
+  --background: var(--background-black);
+  --app-background: var(--app-background-white);
+}
+
+html {
+  background-color: var(--app-background);
+}
+
+*::-webkit-scrollbar {
+  background-color: var(--background);
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 1em;
+}
+
+#app {
+  color: var(--primary-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0 0.5em;
+  color: var(--title-text);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 3.8rem;
+  color: var(--deep-text);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+p {
+  margin: 1em 0;
+  color: var(--primary-text);
+}
+
+ul, ol {
+  list-style-type: none;
+  margin: 1.25em 0;
+}
+
+ul ul,
+ol ol {
+  margin: 0;
+}
+
+ul > li,
+ol > li {
+  position: relative;
+  padding-left: 1.75em;
+  color: var(--primary-text);
+  margin: 0.5em 0;
+}
+
+ul > li::before {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-text);
+  border-radius: 50%;
+  width: 0.375em;
+  height: 0.375em;
+  top: 0.5625em;
+  left: 0.25em;
+}
+
+ol > li::before {
+  content: counter(list-item,var(--list-counter-style, decimal)) ".";
+  position: absolute;
+  color: var(--secondary-text);
+  left: 0.25em;
+  top: 0.5625em;
+}
+
+hr {
+  margin: 1.6rem 0;
+  height: 1px;
+  background-color: var(--divider);
+  border: none;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--deep-text);
+}
+
+blockquote {
+  padding: 0.6em 1.2em;
+  margin: 2em 0;
+  border-left: 0.25em solid var(--border);
+  font-style: normal;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+code {
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+code::before {
+  content: "`";
+}
+
+code::after {
+  content: "`";
+}
+
+pre code::before {
+  content: "";
+}
+
+pre code::after {
+  content: "";
+}
+
+pre {
+  overflow-x: auto;
+  padding: 0.85em 1.25em;
+  margin: 0.5em 0;
+}
+
+div[class*=language-] {
+  background-color: var(--background);
+}
+
+div[class*=language-] > .copy,
+div[class*=language-] > .lang {
+  display: none;
+}

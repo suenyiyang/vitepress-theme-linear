@@ -1,132 +1,19 @@
-.article .header-anchor{
+.article .header-anchor {
   display: none;
 }
 
-.article h1 {
-  font-size: 3rem;
-  line-height: 3.8rem;
-  margin: 5rem 0 5rem;
-}
-
-.article h2 {
-  position: relative;
-  font-size: 2.4rem;
-  line-height: 4.8rem;
-  margin: 3rem 0;
-}
-
-.article h2::before {
-  content: '';
-  border-left: 5px solid var(--primary-color);
-  position: absolute;
-  left: -1.5rem;
-  height: 75%;
-  top: 12%;
-}
-
-.article h1, .article h2 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.article h3 {
-  font-size: 2rem;
-  line-height: 4rem;
-  margin: 2.5rem 0;
-  letter-spacing: 1px;
-}
-
-.article h4 {
-  font-size: 1.6rem;
-  line-height: 3.2rem;
-  margin: 2.5rem 0;
-  letter-spacing: 1px;
-}
-
-.article p, .article li {
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-}
-
-.article > div > p, .article > div > ul, .article > div > ol {
-  margin: 2rem 0 2rem;
-}
-
 .article a {
-  color: var(--primary-color);
-  border-bottom: 2px solid transparent;
+  color: var(--deep-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: border ease-in-out 0.3s;
 }
 
 .article a:hover {
-  border-bottom-color: var(--primary-color);
+  border-color: var(--deep-text);
 }
 
 .article img {
-  display: block;
-  max-width: 70%;
+  max-width: 100%;
   margin: 1rem auto;
 }
-
-.article ol, ul {
-  padding-left: 1.6rem;
-}
-
-.article li {
-  position: relative;
-}
-
-.article li::before {
-  position: absolute;
-  font-weight: 600;
-  content: " · ";
-  margin: 0;
-  left: -1rem;
-}
-
-.article hr {
-  margin: 1.6rem 0;
-  height: 1px;
-  background-color: #e6e6e6;
-  border: none;
-}
-
-.article strong {
-  font-weight: 600;
-  color: #444;
-}
-
-.article blockquote {
-  margin: 2em 0;
-  padding-left: 1.6rem;
-  border-left: 5px solid #e6e6e6;
-}
-
-.article blockquote p {
-  font-size: 1.5rem;
-  font-style: italic;
-  line-height: 1.8em;
-  color: #999;
-}
-
-.article code{
-  font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
-  background-color: var(--shiki-token-background);
-  font-size: 0.75em;
-  padding: 3px 6px;
-  border-radius: 2px;
-}
-
-.article pre{
-  font-family: "Roboto Mono", "Menlo", "Consolas", monospace;
-  font-size: 1.3rem;
-  overflow-x: auto;
-  text-align: left;
-  padding: 1.5rem 2.5rem;
-  line-height: 2rem;
-}
-
-.article pre code {
-  padding: 0;
-  font-size: inherit;
-}
-  
