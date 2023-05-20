@@ -1,6 +1,5 @@
 <script setup lang='ts'>
-// @ts-expect-error network package
-import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs'
+import { init } from '@waline/client'
 import { computed, onMounted } from 'vue'
 import { Head } from '@vueuse/head'
 import { useData } from 'vitepress'
