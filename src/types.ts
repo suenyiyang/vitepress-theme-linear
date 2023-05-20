@@ -11,6 +11,7 @@ export interface ThemeLinearConfig extends DefaultTheme.Config{
   posts?: Post[]
   favicon?: string
   googleId?: string
+  walineServerURL?: string
 }
 
 export interface Post{

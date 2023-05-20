@@ -20,6 +20,7 @@
   --divider-white: rgba(255, 255, 255, 0.12);
   --background-white: rgba(255, 255, 255, 0.08);
   --app-background-black: rgba(20, 20, 20);
+  --max-width: 70ch;
 }
 
 * {
