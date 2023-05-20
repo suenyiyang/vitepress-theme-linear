@@ -13,6 +13,7 @@ onMounted(() => {
       el: '#waline',
       serverURL,
       lang: navigator.language ?? 'zh-CN',
+      dark: 'html.dark',
     })
   }
 })
