@@ -1,16 +1,25 @@
+import path from 'path'
 import { defineConfigWithTheme } from 'vitepress'
-import type { ThemeLinearConfig } from './theme/types'
-import { getPosts } from './theme/config'
+import type { ThemeLinearConfig } from '../../src/types'
+import { getPosts } from '../../src/config'
 
-async function config() {
-  const posts = await getPosts('en-US', 'Asia/Shanghai')
+const getConfig = async () => {
+  const posts = await getPosts('zh-CN', 'Asia/Shanghai')
   return defineConfigWithTheme<ThemeLinearConfig>({
     title: 'Vitepress Theme Linear',
     description: 'A dream theme for vitepress blogs.',
+    cleanUrls: true,
     markdown: {
       theme: {
-        light: 'css-variables',
-        dark: 'css-variables',
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+    vite: {
+      resolve: {
+        alias: {
+          'vitepress-theme-linear': path.join(__dirname, '../../src'),
+        },
       },
     },
     themeConfig: {
@@ -25,4 +34,4 @@ async function config() {
   })
 }
 
-export default config()
+export default getConfig()
