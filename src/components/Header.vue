@@ -79,6 +79,7 @@ header {
 
   .control, .navLine {
     justify-content: center;
+    gap: 1rem 1rem;
   }
 
   .control {
