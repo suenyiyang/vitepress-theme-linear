@@ -5,7 +5,6 @@ import './styles/reset.css'
 import './styles/fonts.css'
 import './styles/global.css'
 import './styles/text.css'
-import './styles/reactivity.css'
 import './styles/article.css'
 
 import Layout from './Layout.vue'

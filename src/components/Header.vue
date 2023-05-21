@@ -32,7 +32,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .title{
@@ -42,9 +42,12 @@ header {
   color: var(--deep-text);
 }
 
-.control {
+.control,
+.navLine {
   display: flex;
   align-items: center;
+  gap: 0 2rem;
+  flex-wrap: wrap;
 }
 
 .colorTheme {
@@ -53,12 +56,6 @@ header {
   line-height: 3.2rem;
   cursor: pointer;
   user-select: none;
-  margin-left: 2rem;
-}
-
-.navLine {
-  display: flex;
-  align-items: center;
 }
 
 .navItem {
@@ -74,7 +71,18 @@ header {
   color: var(--deep-text);
 }
 
-.navItem:not(:last-child) {
-  margin-right: 2rem;
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .control, .navLine {
+    justify-content: center;
+  }
+
+  .control {
+    margin-top: 1.6rem;
+  }
 }
 </style>

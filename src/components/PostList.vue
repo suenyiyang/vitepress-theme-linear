@@ -45,7 +45,7 @@ const toTraditionalChinese = (num: string | number) => {
 <style scoped>
 .postGroup {
   position: relative;
-  margin: 15rem 0;
+  margin: 10rem 0;
 }
 
 .background {
@@ -54,8 +54,14 @@ const toTraditionalChinese = (num: string | number) => {
   z-index: -1;
   opacity: 0.5;
   color: transparent;
-  left: -1rem;
+  left: -3rem;
   top: -1rem;
   -webkit-text-stroke: 2px var(--border);
+}
+
+@media screen and (max-width: 768px) {
+  .background {
+    font-size: 8rem;
+  }
 }
 </style>
