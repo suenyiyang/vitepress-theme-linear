@@ -57,3 +57,7 @@ a:active {
 .light [class*="-dark"] {
   display: none;
 }
+
+s {
+  text-decoration: line-through;
+}
