@@ -12,7 +12,10 @@ const toggleDark = useToggle(isDark)
 
 <template>
   <header>
-    <a class="title" href="/">{{ siteInfo.title }}</a>
+    <a class="title" href="/">
+      <img v-show="!isDark" class="logo" src="/logo.svg" :alt="siteInfo.title">
+      <img v-show="isDark" class="logo" src="/logo-dark.svg" :alt="siteInfo.title">
+    </a>
     <div class="control">
       <div class="navLine">
         <a v-for="item in links" :key="item.name" class="navItem" :href="withBase(item.link)">
@@ -29,17 +32,25 @@ const toggleDark = useToggle(isDark)
 <style scoped>
 header {
   width: 100%;
+  min-height: 3.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 5rem;
 }
 
-.title{
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: 800;
   color: var(--deep-text);
+  height: 3.2rem;
+  object-fit: cover;
 }
 
 .control,
