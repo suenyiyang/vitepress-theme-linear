@@ -176,6 +176,7 @@ pre {
 
 div[class*=language-] {
   background-color: var(--background);
+  border-radius: 4px;
 }
 
 div[class*=language-] > .copy,
