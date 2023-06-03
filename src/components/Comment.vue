@@ -3,9 +3,11 @@ import { init } from '@waline/client'
 import { computed, onMounted } from 'vue'
 import { Head } from '@vueuse/head'
 import { useData } from 'vitepress'
+import { useDark } from '@vueuse/core'
 
 const data = useData()
 const serverURL = data.site.value.themeConfig.walineServerURL
+const isDark = useDark({ valueLight: 'light' })
 
 onMounted(() => {
   if (serverURL) {
@@ -13,7 +15,7 @@ onMounted(() => {
       el: '#waline',
       serverURL,
       lang: navigator.language ?? 'zh-CN',
-      dark: 'html.dark',
+      dark: isDark.value,
     })
   }
 })
