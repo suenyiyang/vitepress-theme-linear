@@ -1,4 +1,4 @@
-html.dark {
+body.dark {
   --deep-text: var(--deep-text-white);
   --title-text: var(--title-text-white);
   --primary-text: var(--primary-text-white);
@@ -10,7 +10,7 @@ html.dark {
   --app-background: var(--app-background-black);
 }
 
-html.light {
+body.light {
   --deep-text: var(--deep-text-black);
   --title-text: var(--title-text-black);
   --primary-text: var(--primary-text-black);
@@ -22,7 +22,7 @@ html.light {
   --app-background: var(--app-background-white);
 }
 
-html {
+body {
   background-color: var(--app-background);
 }
 

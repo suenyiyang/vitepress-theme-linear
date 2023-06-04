@@ -1,13 +1,10 @@
 <script setup lang='ts'>
 import { useData, withBase } from 'vitepress'
-import { useDark, useToggle } from '@vueuse/core'
+import { isDark, toggleDark } from '../composables/useDark'
 import type { Link } from '../types'
 const data = useData()
 const links = data.site.value.themeConfig.links as Link[]
 const siteInfo = data.site.value
-
-const isDark = useDark({ valueLight: 'light' })
-const toggleDark = useToggle(isDark)
 </script>
 
 <template>
