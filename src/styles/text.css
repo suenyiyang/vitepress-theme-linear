@@ -119,6 +119,17 @@ ol > li::before {
   left: 0.25em;
 }
 
+*[class*="wl-"] li::before {
+  content: unset;
+  width: unset;
+  height: unset;
+  top: unset;
+  left: unset;
+  background-color: unset;
+  border-radius: unset;
+  position: unset;
+}
+
 hr {
   margin: 1.6rem 0;
   height: 1px;

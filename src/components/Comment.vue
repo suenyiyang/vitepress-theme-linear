@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { Waline } from '@waline/client/component'
-import { computed } from 'vue'
+import { computed, unref } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import '@waline/client/dist/waline.css'
 
@@ -15,10 +15,16 @@ const path = computed(() => {
 const shouldShowWaline = computed(() => {
   return serverURL && data.page.value.frontmatter.comments !== false && !data.page.value.isNotFound
 })
+
+const walineProps = Object.assign({
+  dark: 'body.dark',
+  serverURL,
+  lang,
+}, data.site.value.themeConfig.waline)
 </script>
 
 <template>
-  <Waline v-if="shouldShowWaline" :server-u-r-l="serverURL" :path="path" :lang="lang" dark="body.dark" />
+  <Waline v-if="shouldShowWaline" v-bind="walineProps" :path="path" />
 </template>
 
 <style scoped>

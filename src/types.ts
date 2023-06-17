@@ -1,3 +1,4 @@
+import type { WalineProps } from '@waline/client'
 import type { DefaultTheme } from 'vitepress'
 
 export interface Link{
@@ -12,6 +13,7 @@ export interface ThemeLinearConfig extends DefaultTheme.Config{
   favicon?: string
   googleId?: string
   walineServerURL?: string
+  waline?: Partial<WalineProps>
 }
 
 export interface Post{
