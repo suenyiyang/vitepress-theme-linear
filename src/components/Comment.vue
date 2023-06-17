@@ -1,37 +1,28 @@
 <script setup lang='ts'>
-import { init } from '@waline/client'
-import { computed, onMounted } from 'vue'
-import { Head } from '@vueuse/head'
-import { useData } from 'vitepress'
+import { Waline } from '@waline/client/component'
+import { computed } from 'vue'
+import { useData, useRoute } from 'vitepress'
+import '@waline/client/dist/waline.css'
 
 const data = useData()
 const serverURL = data.site.value.themeConfig.walineServerURL
-
-onMounted(() => {
-  if (serverURL) {
-    init({
-      el: '#waline',
-      serverURL,
-      lang: navigator.language ?? 'zh-CN',
-      dark: 'body.dark',
-    })
-  }
-})
-
+const path = computed(() => useRoute().path)
+const lang = navigator.language ?? 'zh-CN'
 const shouldShowWaline = computed(() => {
-  return serverURL && data.page.value.frontmatter.comments !== false
+  return serverURL && data.page.value.frontmatter.comments !== false && !data.page.value.isNotFound
 })
 </script>
 
 <template>
-  <div v-show="shouldShowWaline" id="waline">
+  <!-- <div v-show="shouldShowWaline" id="waline">
     <Head>
       <link
         rel="stylesheet"
         href="https://unpkg.com/@waline/client@v2/dist/waline.css"
       >
     </Head>
-  </div>
+  </div> -->
+  <Waline v-if="shouldShowWaline" :server-u-r-l="serverURL" :path="path" :lang="lang" dark="body.dark" />
 </template>
 
 <style scoped>
