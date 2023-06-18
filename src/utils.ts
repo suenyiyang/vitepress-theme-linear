@@ -10,8 +10,8 @@ export async function getPosts(locale: string, timezone: string): Promise<Post[]
     paths.map(async (item) => {
       const file = await fs.readFile(item, 'utf-8')
       const { data, content } = matter(file)
-      data.rawDate = data.date ? new Date(data.date).toString() : (await fs.stat(item)).birthtime.toString()
-      data.date = _convertDate(data.rawDate, locale, timezone)
+      data.rawDate = data.date ? new Date(data.date) : (await fs.stat(item)).birthtime
+      data.date = _convertDate(data.rawDate.toString(), locale, timezone)
       data.readTime = calculateReadTime(content)
       return {
         frontmatter: data,
@@ -34,7 +34,7 @@ function _convertDate(date: string, locale: string, timezone: string) {
 }
 
 function _compareDate(obj1: Post, obj2: Post) {
-  return obj1.frontmatter.rawDate < obj2.frontmatter.rawDate ? 1 : -1
+  return obj1.frontmatter.rawDate.getTime() < obj2.frontmatter.rawDate.getTime() ? 1 : -1
 }
 
 async function getPostMDFilePaths() {
