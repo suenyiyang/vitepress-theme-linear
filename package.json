@@ -1,6 +1,6 @@
 {
   "name": "vitepress-theme-linear",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "packageManager": "pnpm@6.32.6",
   "description": "Linear theme for vitepress.",
   "keywords": [],
@@ -26,7 +26,8 @@
     "build:docs": "vitepress build docs",
     "build": "rimraf dist && tsup src/config.ts --dts --format cjs,esm --minify --out-dir dist",
     "lint": "eslint ./src/**/*.{ts,vue} --fix",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "serve": "vitepress serve docs"
   },
   "peerDependencies": {
     "typescript": "^4.6.3"
