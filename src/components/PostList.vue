@@ -7,7 +7,7 @@ const posts: Post[] = data.site.value.themeConfig.posts
 const groupPosts = () => {
   const groups: Record<string, Post[]> = {}
   posts.forEach((post) => {
-    const date = post.frontmatter.rawDate.toString()
+    const date = post.frontmatter.rawDate
     const year = new Date(date).getFullYear().toString()
     if (!groups[year])
       groups[year] = []
