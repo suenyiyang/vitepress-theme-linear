@@ -1,5 +1,13 @@
 # Vitepress Theme Linear
 
+## 📣 Archived
+
+Since maintaining two repos is a bit of a hassle, I decided to merge this repo into [my blog repo](https://github.com/yysuen/blog). This repo will be archived and no longer maintained.
+
+The new repo is a monorepo, and the theme is located at `packages/theme`.
+
+The package name remains the same, so you can still install it with `pnpm i -D vitepress-theme-linear`.
+
 ## Introduction
 
 A dream theme for vitepress blogs.
@@ -52,7 +60,8 @@ Refer to official [guide](https://vitepress.vuejs.org/guide/configuration.html#t
 
 ```ts
 import { defineConfigWithTheme } from 'vitepress'
-import { ThemeLinearConfig, getPosts } from './theme/config'
+import type { ThemeLinearConfig } from './theme/config'
+import { getPosts } from './theme/config'
 
 const locale = 'en-US'
 const timezone = 'Asia/Shanghai'
